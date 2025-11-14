@@ -1,0 +1,121 @@
+{
+  "books": [
+    {
+      "id": "1",
+      "judul": "Harry Potter dan Si Anak Terkutuk: Naskah Drama Orisinal",
+      "penulis": "J.K. Rowling",
+      "deskripsi": "Menjadi Harry Potter memang sulit dan sekarang pun tidak lebih mudah ketika ia menjadi pegawai Kementerian Sihir yang kelelahan, suami, dan ayah tiga anak usia sekolah.",
+      "rating": "4.52",
+      "penerbit": "Gramedia Pustaka Utama",
+      "tahun_terbit": "2025",
+      "jumlah_halaman": "384",
+      "cover_url": "https://image.gramedia.net/rs:fit:0:0/plain/https://cdn.gramedia.com/uploads/picture_meta/2023/3/1/axl6izw8gjpwz3xqbtqvuk.jpg",
+      "pdf_url": "https://drive.google.com/file/d/1V25YSG_R_6_rsBNQsmW4wvYoFnGYCb_T/view?usp=drive_link",
+      "created_at": "2025-06-02 16:17:28"
+    },
+    {
+      "id": "2",
+      "judul": "Focus on What Matters",
+      "penulis": "Darius Foroux",
+      "deskripsi": "Mengapa begitu sulit untuk hidup sejahtera di tengah kekacauan dan kebisingan? Ini bukan masalah dunia modern saja, melainkan persoalan manusia sepanjang masa.",
+      "rating": "4.30",
+      "penerbit": "Gramedia Pustaka Utama",
+      "tahun_terbit": "2023",
+      "jumlah_halaman": "154",
+      "cover_url": "https://image.gramedia.net/rs:fit:0:0/plain/https://cdn.gramedia.com/uploads/products/95ob5m98ur.jpg",
+      "pdf_url": "https://drive.google.com/file/d/1W5XjGj3Vsb0SL7f41znayV5CTmXyPNqd/view?usp=drive_link",
+      "created_at": "2025-06-02 16:17:28"
+    },
+    {
+      "id": "3",
+      "judul": "Satine",
+      "penulis": "Ika Natassa",
+      "deskripsi": "Ada yang bilang hidup yang tertata sempurna ibarat makanan yang dikemas rapi. Semuanya tersusun pada tempatnya, cantik.",
+      "rating": "3.90",
+      "penerbit": "Gramedia Pustaka Utama",
+      "tahun_terbit": "2019",
+      "jumlah_halaman": "246",
+      "cover_url": "https://image.gramedia.net/rs:fit:0:0/plain/https://cdn.gramedia.com/uploads/product-metas/8e5304v449.jpg",
+      "pdf_url": "https://drive.google.com/file/d/1bvZW9-2v20cmiaQyQrjm2uIRqjivqBaB/view?usp=drive_link",
+      "created_at": "2025-06-02 16:17:28"
+    },
+    {
+      "id": "4",
+      "judul": "Petualangan Sukab",
+      "penulis": "Seno Gumira Ajidarma",
+      "deskripsi": "Kisah ini ngikutin tokoh Sukab, karakter absurd nan misterius yang sering muncul di karya-karya Seno. Tapi di buku ini, dia jadi pusat cerita. Petualangannya penuh simbol, surealisme, dan kritik sosial yang dibungkus dengan gaya narasi yang puitis, lucu, kadang gelap.",
+      "rating": "4.10",
+      "penerbit": "Gramedia Pustaka Utama",
+      "tahun_terbit": "2022",
+      "jumlah_halaman": "180",
+      "cover_url": "https://gpu.id/data-gpu/images/img-book/94726/petualangan_sukab.jpg",
+      "pdf_url": "https://drive.google.com/file/d/1epA0cFROQfd_ksY2AhatqnlCjO6dnx-j/view?usp=drive_link",
+      "created_at": "2025-06-02 16:17:28"
+    },
+    {
+      "id": "5",
+      "judul": "Nemesis #1: City of Evils",
+      "penulis": "Lexie Xu",
+      "deskripsi": "Pandora, server milik Yamada Graha Internet (YGnet), menyimpan data-data rahasia tentang beberapa keluarga konglomerat ternama di Indonesia.",
+      "rating": "4.00",
+      "penerbit": "Gramedia Pustaka Utama",
+      "tahun_terbit": "2020",
+      "jumlah_halaman": "354",
+      "cover_url": "https://gpu.id/data-gpu/images/img-book/94727/624175002.jpg",
+      "pdf_url": "https://drive.google.com/file/d/1o6nGChYYLhvXIhnXtXvcrMjBuzmL9S4N/view?usp=drive_link",
+      "created_at": "2025-06-02 16:17:28"
+    },
+    {
+      "id": "6",
+      "judul": "G30S PKI",
+      "penulis": "Sejarah Indonesia",
+      "deskripsi": "Buku ini mengupas tuntas peristiwa G30S yang menjadi titik balik dalam sejarah politik Indonesia. Salim Said membahas berbagai aspek, mulai dari peran Partai Komunis Indonesia (PKI) dan D.N. Aidit, hingga dinamika hubungan antara Presiden Sukarno dan Jenderal Soeharto. Dengan pendekatan yang kritis, penulis berusaha menjawab pertanyaan besar: siapa sebenarnya dalang di balik peristiwa G30S?",
+      "rating": "4.90",
+      "penerbit": "Gramedia Pustaka Utama",
+      "tahun_terbit": "2016",
+      "jumlah_halaman": "97",
+      "cover_url": "https://tse3.mm.bing.net/th/id/OIP.K21JYmHTwZvAwePFS320hQHaJr?rs=1&pid=ImgDetMain",
+      "pdf_url": "https://drive.google.com/file/d/1bvZW9-2v20cmiaQyQrjm2uIRqjivqBaB/view?usp=drive_link",
+      "created_at": "2025-06-02 16:17:28"
+    },
+    {
+      "id": "7",
+      "judul": "Killer Peter",
+      "penulis": "Kim Jung-Hyun",
+      "deskripsi": "Peter, seorang pembunuh legendaris dari organisasi kriminal Glory Club, memutuskan pensiun dan menjalani hidup tenang dengan membuka toko buku bekas. Namun, ketenangannya terganggu ketika dia diserang oleh mantan organisasinya sendiri. Ajaibnya, setelah insiden tersebut, tubuh Peter kembali ke usia remajanya. Dengan kekuatan mudanya yang kembali, Peter bertekad membalas dendam kepada Glory Club.",
+      "rating": "4.60",
+      "penerbit": "Naver Webtoon",
+      "tahun_terbit": "2023",
+      "jumlah_halaman": "127",
+      "cover_url": "https://tse4.mm.bing.net/th/id/OIP.9qi4wMOoRJU7KK6IZ3veWwHaJn?rs=1&pid=ImgDetMain",
+      "pdf_url": "https://drive.google.com/file/d/1HJiHm3b7xXG0u68ywJy_H65s6_nG4Yal/view?usp=drive_link",
+      "created_at": "2025-06-02 16:17:28"
+    },
+    {
+      "id": "8",
+      "judul": "Cerita Citra",
+      "penulis": "Mad Loki",
+      "deskripsi": "Citra, siswi kelas 11 yang dikenal pendiam dan selalu duduk di pojok belakang kelas, lebih suka tenggelam dalam buku-buku fiksi ketimbang ngobrol sama temen sekelas. Tapi semua berubah sejak Bima, murid baru yang misterius dan super charming, duduk tepat di sampingnya.",
+      "rating": "4.90",
+      "penerbit": "Gramedia Pustaka Utama",
+      "tahun_terbit": "2024",
+      "jumlah_halaman": "58",
+      "cover_url": "https://i0.wp.com/1.bp.blogspot.com/-D8zYuoYWPEM/X6in4yB7nGI/AAAAAAAAAhY/fVl3BnKYhto9aamQDW9wVFe-dXWJnM3wACLcBGAsYHQ/w1200-h630-p-k-no-nu/cerita%2Bcitra%2Beps%2B1.jpg",
+      "pdf_url": "https://drive.google.com/file/d/1Bzb11uFDFr4sZXxw6bArD-JdwuuVMztJ/view?usp=drive_link",
+      "created_at": "2025-06-02 16:17:28"
+    },
+    {
+      "id": "9",
+      "judul": "Ragna Crimson",
+      "penulis": "Daiki Kobayashi",
+      "deskripsi": "Dalam dunia di mana naga menjadi ancaman terbesar bagi umat manusia, hanya ada dua cara untuk mengalahkan mereka: membekukan darah mereka dengan silverine, atau membakar tubuh mereka dengan kekuatan cahaya matahari.\n\nRagna, seorang pemburu naga muda yang lemah, bermitra dengan Crimson, sosok misterius dengan kekuatan luar biasa. Bersama-sama, mereka berjuang melawan para naga yang mengancam umat manusia, dengan tujuan akhir untuk memusnahkan semua naga dan mengubah takdir mereka.",
+      "rating": 4.8,
+      "penerbit": "Square Enix",
+      "tahun_terbit": 2021,
+      "jumlah_halaman": 212,
+      "cover_url": "https://animotaku.fr/wp-content/uploads/2022/03/manga-ragna-crimson-tome-7.jpeg",
+      "pdf_url": "https://drive.google.com/file/d/1wUotrqwnTKtHs65jbFFRMKtzO0M491kS/view?usp=sharing",
+      "created_at": "2025-06-02T16:17:28"
+    }    
+  ]
+}
