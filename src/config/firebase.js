@@ -1,14 +1,19 @@
 const admin = require('firebase-admin');
-const serviceAccount = require('./serviceAccountKey.json');
 
-// 🔐 Inisialisasi Firebase Admin SDK
+// 🔐 Ambil service account dari ENV (string JSON)
+const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
+
+// 🔐 Inisialisasi Firebase Admin
 if (!admin.apps.length) {
   admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount)
+    credential: admin.credential.cert({
+      project_id: serviceAccount.project_id,
+      private_key: serviceAccount.private_key.replace(/\\n/g, '\n'),
+      client_email: serviceAccount.client_email,
+    }),
   });
 }
 
-const db = admin.firestore(); // Instance Firestore utama
+const db = admin.firestore();
 
-// ✅ Export supaya bisa dipakai di mana-mana
 module.exports = { admin, db };

@@ -2,26 +2,8 @@ const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
 
-// ✅ NEW: Tambahkan try-catch biar Firebase bisa jalan di lokal & Render
-const admin = require('firebase-admin');
-
-let serviceAccount;
-if (process.env.FIREBASE_SERVICE_ACCOUNT) {
-  try {
-    serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
-    console.log("🔥 Firebase service account loaded from ENV");
-  } catch (e) {
-    console.error("⚠️ FIREBASE_SERVICE_ACCOUNT is not valid JSON:", e.message);
-    process.exit(1);
-  }
-} else {
-  console.log("🧩 Using local Firebase serviceAccountKey.json");
-  serviceAccount = require('./config/serviceAccountKey.json');
-}
-
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount)
-});
+// 🔥 Firebase sudah diinisialisasi di config/firebase.js
+const { admin } = require('./config/firebase');
 
 // 🔧 Routes Import
 const bookRoutes = require('./routes/book');
@@ -55,7 +37,7 @@ app.use((req, res, next) => {
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// ✅ NEW: Health check route buat Render
+// 💚 Health Check (wajib untuk Render)
 app.get('/health', (req, res) => {
   res.status(200).json({ ok: true, time: new Date().toISOString() });
 });
@@ -75,13 +57,13 @@ app.get('/api/test-auth', (req, res) => {
         method: 'POST',
         url: '/api/otp/send',
         body: { email: 'string', type: 'register|reset' },
-        note: 'Universal OTP endpoint untuk register dan reset password'
+        note: 'Universal OTP endpoint'
       },
       verifyOTP: {
         method: 'POST',
         url: '/api/otp/verify',
         body: { email: 'string', otp: 'string', type: 'register|reset' },
-        note: 'Universal OTP verification endpoint'
+        note: 'Universal OTP verification'
       },
       login: {
         method: 'POST',
@@ -109,16 +91,11 @@ app.get('/api', (req, res) => {
         resetPassword: '/api/auth/reset-password'
       },
       otp: {
-        send: '/api/otp/send (universal - register & reset)',
-        verify: '/api/otp/verify (universal - register & reset)'
+        send: '/api/otp/send',
+        verify: '/api/otp/verify'
       },
       books: '/api/books',
-      bookById: '/api/books/:id',
-      booksByGenre: '/api/books/genre/:genre',
-      searchBooks: '/api/books/search?q=query',
       genres: '/api/genres',
-      genreById: '/api/genres/:id',
-      bookGenres: '/api/genres/book/:bookId'
     }
   });
 });
@@ -126,23 +103,27 @@ app.get('/api', (req, res) => {
 // 🚀 Routes
 app.use('/api/books', bookRoutes);
 app.use('/api/genres', genreRoutes);
+
 app.use('/api/auth', (req, res, next) => {
-  console.log(`📡 Incoming auth request: ${req.method} ${req.originalUrl}`);
+  console.log(`📡 Auth: ${req.method} ${req.originalUrl}`);
   next();
 }, authRoutes);
+
 app.use('/api/otp', (req, res, next) => {
-  console.log(`📡 Incoming OTP request: ${req.method} ${req.originalUrl}`);
+  console.log(`📡 OTP: ${req.method} ${req.originalUrl}`);
   next();
 }, otpRoutes);
+
 app.use('/api/favorites', favoritesRoutes);
 app.use('/api', historyRoutes);
 app.use('/api/users', userRoutes);
+
 app.use('/api/comments', commentRoutes.default || commentRoutes);
 app.use('/admin', adminRoutes);
 
-// ⚠️ Global Error Handling
+// ⚠️ Global Error Handler
 app.use((err, req, res, next) => {
-  console.error('Error:', err);
+  console.error('🔥 Error:', err);
   res.status(500).json({
     status: 'error',
     message: 'Terjadi kesalahan pada server',
@@ -150,10 +131,9 @@ app.use((err, req, res, next) => {
   });
 });
 
-// ✅ Import fungsi
+// 🧹 Auto Cleanup OTP
 const cleanupExpiredOtps = require('./utils/cleanupExpiredOtps');
 
-// ✅ Jalankan setiap 5 menit
 setInterval(() => {
   console.log('⏰ Menjalankan cleanup OTP...');
   cleanupExpiredOtps();
